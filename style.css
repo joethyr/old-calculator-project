@@ -1,0 +1,12 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+  height: 65vh;
+  width: 25vw;
+}
+
+.grid-container > button {
+  background-color: beige;
+  padding: 1em;
+}
