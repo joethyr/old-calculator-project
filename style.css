@@ -1,9 +1,19 @@
+* {
+  background-color: #ddcad9;
+}
+
+h1 {
+  color: #553743da;
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background-color: #05a8aa;
   grid-gap: 2px;
-  height: 55vh;
+  height: 60vh;
   width: 24vw;
   margin: auto;
   border: 3px solid #006d6e;
@@ -13,16 +23,35 @@
 
 .grid-container > button {
   background-color: #b8d5b8;
-  padding: 1em;
+  padding: auto;
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 30px;
+  color: #004042;
+}
+
+.grid-container > button:hover {
+  background-color: #91aa91;
+  color: #001f20;
+  cursor: pointer;
 }
 
 .output-container {
-  background-color: #eed9ce;
-  padding: 1.5em;
+  background-color: #cad1d6;
   grid-column: 1/5;
   margin-bottom: 4px;
   border: #006d6e 2px solid;
   border-radius: 3px;
+  font-family: "Orbitron", sans-serif;
+  color: #1a0e12a9;
+  font-size: 38px;
+}
+
+.output-numbers {
+  background-color: #cad1d6;
+  position: relative;
+  float: right;
+  margin: 10px 4px 0 0;
+  line-height: 35px;
 }
 
 .button-zero {
