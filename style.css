@@ -13,8 +13,7 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   background-color: #05a8aa;
   grid-gap: 2px;
-  height: 60vh;
-  width: 24vw;
+  width: 300px;
   margin: auto;
   border: 3px solid #006d6e;
   border-radius: 8px;
@@ -46,12 +45,20 @@ h1 {
   font-size: 38px;
 }
 
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    width: 400px;
+    height: 460px;
+    margin: auto;
+  }
+}
+
 .output-numbers {
   background-color: #cad1d6;
   position: relative;
   float: right;
   margin: 10px 4px 0 0;
-  line-height: 35px;
+  /* line-height: 35px; */
 }
 
 .button-zero {
