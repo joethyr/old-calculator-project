@@ -1,14 +1,28 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background-color: #05a8aa;
   grid-gap: 2px;
   height: 55vh;
-  width: 25vw;
+  width: 24vw;
+  margin: auto;
+  border: 3px solid #006d6e;
+  border-radius: 8px;
+  padding: 8px;
 }
 
 .grid-container > button {
-  background-color: beige;
+  background-color: #b8d5b8;
   padding: 1em;
+}
+
+.output-container {
+  background-color: #eed9ce;
+  padding: 1.5em;
+  grid-column: 1/5;
+  margin-bottom: 4px;
+  border: #006d6e 2px solid;
+  border-radius: 3px;
 }
 
 .button-zero {
@@ -16,11 +30,11 @@
 }
 
 .button-add {
-  grid-row: 2/4;
+  grid-row: 3/5;
   grid-column: 4/5;
 }
 
 .button-equal {
-  grid-row: 4/6;
+  grid-row: 5/7;
   grid-column: 4/5;
 }
