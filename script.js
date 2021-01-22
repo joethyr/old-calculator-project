@@ -34,15 +34,16 @@ function operate(operator, a, b) {
       return null;
   }
 }
-let displayValue = 0;
+let displayValue = "";
 
 $(document).ready(function () {
   $("button.button-operand").click(function () {
-    displayValue = $(this).val();
-    // will probably store the values in as an array/object
-    // how to store the values without the previous one being overwritten
+    displayValue += $(this).val();
     document.getElementById("output-numbers").innerHTML = displayValue;
   });
 });
 
-function Testm() {}
+// function buttonClicked(number) {
+//   displayValue = displayValue + number;
+//   document.getElementById("output-numbers").innerHTML = displayValue;
+// }
