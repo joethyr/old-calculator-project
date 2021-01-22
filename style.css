@@ -53,7 +53,7 @@ h1 {
   }
 }
 
-.output-numbers {
+#output-numbers {
   background-color: #cad1d6;
   position: relative;
   float: right;
