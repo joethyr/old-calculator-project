@@ -50,3 +50,9 @@ function operandClick(number) {
     document.getElementById("output-numbers").innerHTML = displayValue;
   }
 }
+buttonDecimal = ".";
+function decimalClicked() {
+  displayValue = displayValue + buttonDecimal;
+  document.getElementById("output-numbers").innerHTML = displayValue;
+  document.getElementById("button-decimal").onclick = null;
+}
