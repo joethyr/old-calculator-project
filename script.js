@@ -1,4 +1,5 @@
 // function that adds
+
 function add(a, b) {
   return a + b;
 }
@@ -36,14 +37,16 @@ function operate(operator, a, b) {
 }
 let displayValue = "";
 
-$(document).ready(function () {
-  $("button.button-operand").click(function () {
-    displayValue += $(this).val();
+function operandClick(number) {
+  if (displayValue.length > 8) {
+    alert("the value is too high!");
+    return;
+  }
+  if (number >= 1 && number <= 9) {
+    displayValue = displayValue + number;
     document.getElementById("output-numbers").innerHTML = displayValue;
-  });
-});
-
-// function buttonClicked(number) {
-//   displayValue = displayValue + number;
-//   document.getElementById("output-numbers").innerHTML = displayValue;
-// }
+  } else if (number === 0 && displayValue.length > 0) {
+    displayValue = displayValue + number;
+    document.getElementById("output-numbers").innerHTML = displayValue;
+  }
+}
