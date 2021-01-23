@@ -52,9 +52,10 @@ function operandClick(number) {
 }
 buttonDecimal = ".";
 function decimalClicked() {
-  displayValue = displayValue + buttonDecimal;
-  document.getElementById("output-numbers").innerHTML = displayValue;
-  document.getElementById("button-decimal").onclick = null;
+  if (displayValue.includes(".") !== true) {
+    displayValue = displayValue + buttonDecimal;
+    document.getElementById("output-numbers").innerHTML = displayValue;
+  }
 }
 
 function buttonclear() {
