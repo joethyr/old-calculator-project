@@ -56,3 +56,8 @@ function decimalClicked() {
   document.getElementById("output-numbers").innerHTML = displayValue;
   document.getElementById("button-decimal").onclick = null;
 }
+
+function buttonclear() {
+  displayValue = "";
+  document.getElementById("output-numbers").innerHTML = displayValue;
+}
