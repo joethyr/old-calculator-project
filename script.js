@@ -59,6 +59,29 @@ function decimalClicked() {
 }
 
 function buttonclear() {
+  oldDisplayValue = [];
   displayValue = "";
   document.getElementById("output-numbers").innerHTML = displayValue;
+}
+
+let oldDisplayValue = [];
+let storeDisplayValue = "";
+
+function addClicked() {
+  displayValue = parseInt(displayValue, 10);
+  oldDisplayValue.push(displayValue);
+  displayValue = "";
+  oldDisplayValue.reduce(add);
+  document.getElementById("output-numbers").innerHTML = oldDisplayValue.reduce(
+    add
+  );
+}
+function subractClicked() {
+  displayValue = parseInt(displayValue, 10);
+  oldDisplayValue.push(displayValue);
+  displayValue = "";
+  oldDisplayValue.reduce(subtract);
+  document.getElementById("output-numbers").innerHTML = oldDisplayValue.reduce(
+    subtract
+  );
 }
