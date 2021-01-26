@@ -65,23 +65,46 @@ function buttonclear() {
 }
 
 let oldDisplayValue = [];
-let storeDisplayValue = "";
+let storeDisplayValue = [];
 
 function addClicked() {
-  displayValue = parseInt(displayValue, 10);
-  oldDisplayValue.push(displayValue);
-  displayValue = "";
-  oldDisplayValue.reduce(add);
-  document.getElementById("output-numbers").innerHTML = oldDisplayValue.reduce(
-    add
-  );
+  if (oldDisplayValue.length > 1) {
+    oldDisplayValue = storeDisplayValue;
+    displayValue = parseFloat(displayValue);
+    oldDisplayValue.push(displayValue);
+    displayValue = "";
+    storeDisplayValue = [oldDisplayValue.reduce(add)];
+    document.getElementById(
+      "output-numbers"
+    ).innerHTML = oldDisplayValue.reduce(add);
+  } else {
+    displayValue = parseFloat(displayValue);
+    oldDisplayValue.push(displayValue);
+    displayValue = "";
+    storeDisplayValue = [oldDisplayValue.reduce(add)];
+    document.getElementById(
+      "output-numbers"
+    ).innerHTML = oldDisplayValue.reduce(add);
+  }
 }
+
 function subractClicked() {
-  displayValue = parseInt(displayValue, 10);
-  oldDisplayValue.push(displayValue);
-  displayValue = "";
-  oldDisplayValue.reduce(subtract);
-  document.getElementById("output-numbers").innerHTML = oldDisplayValue.reduce(
-    subtract
-  );
+  if (oldDisplayValue.length > 1) {
+    oldDisplayValue = storeDisplayValue;
+    displayValue = parseFloat(displayValue);
+    oldDisplayValue.push(displayValue);
+    displayValue = "";
+    storeDisplayValue = [oldDisplayValue.reduce(subtract)];
+    document.getElementById(
+      "output-numbers"
+    ).innerHTML = oldDisplayValue.reduce(subtract);
+  } else {
+    displayValue = parseFloat(displayValue);
+    oldDisplayValue.push(displayValue);
+    displayValue = "";
+    storeDisplayValue = [oldDisplayValue.reduce(subtract)];
+    document.getElementById(
+      "output-numbers"
+    ).innerHTML = oldDisplayValue.reduce(subtract);
+  }
 }
